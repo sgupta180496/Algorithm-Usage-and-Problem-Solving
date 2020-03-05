@@ -3,7 +3,9 @@ import java.util.Arrays;
 import java.util.List;
 
 class Solution {
-    // We record the timestamp that we visit each node. For each node, we check every neighbor except its parent and return a smallest timestamp in all its neighbors. If this timestamp is strictly less than the node's timestamp, we know that this node is somehow in a cycle. Otherwise, this edge from the parent to this node is a critical connection
+    // We record the timestamp that we visit each node. For each node, we check every neighbor except its parent and 
+    // return a smallest timestamp in all its neighbors. If this timestamp is strictly less than the node's timestamp, 
+    // we know that this node is somehow in a cycle. Otherwise, this edge from the parent to this node is a critical connection
     public List<List<Integer>> criticalConnections(int n, List<List<Integer>> connections) {
         List<Integer>[] graph = new ArrayList[n];
         for (int i = 0; i < n; i++) graph[i] = new ArrayList<>();
